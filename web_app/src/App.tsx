@@ -309,7 +309,6 @@ function App() {
             </ul>
           </div>
           <div className="footer-social">
-            {/*space for social media*/}
           </div>
         </div>
         <div className="footer-bottom">
