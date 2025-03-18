@@ -79,6 +79,32 @@ function App() {
 
   return (
     <div className="app-container">
+      <header className="main-header">
+        <div className="container header-container">
+          <div className="logo-container">
+            <a href="#" className="logo-link">
+              <div className="logo-placeholder">R</div>
+              <h1 className="header-title">Re-imagine Robotics</h1>
+            </a>
+          </div>
+          <button 
+            className="mobile-menu-toggle" 
+            onClick={() => document.querySelector('.main-nav')?.classList.toggle('active')}
+          >
+            ☰
+          </button>
+          <nav className="main-nav">
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#components">Program</a></li>
+              <li><a href="#achievements">Achievements</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
       <header className="hero">
         <div className="hero-content">
           <h1 className="hero-title">Re-imagine Robotics</h1>
