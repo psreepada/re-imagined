@@ -295,24 +295,42 @@ body {
 }
 
 @media (max-width: 768px) {
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .about-image {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .about-card {
+    max-width: 100%;
+    padding: 20px;
+  }
+
   .about-cards-row {
     flex-direction: column;
     align-items: center;
   }
-  
-  .about-cards-row .about-card {
-    max-width: 100%;
-  }
-  
-  .program-image {
-    height: 150px;
-  }
-  
-  .about-image-centered img {
-    max-height: 300px;
-    object-fit: cover;
+
+  .about-image img {
+    width: 100%;
+    height: auto;
   }
 }
+
 
 .program-section {
   background-color: var(--secondary-color);
