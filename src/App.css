@@ -437,6 +437,22 @@ body {
   position: relative;
 }
 
+.achievement-section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  max-height: 400px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.achievement-section img:hover {
+  transform: scale(1.01);
+}
+
 .trophy-animation {
   margin: 20px auto;
   position: relative;

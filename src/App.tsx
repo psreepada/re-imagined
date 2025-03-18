@@ -1,5 +1,6 @@
 import './App.css'
 import pic3 from './assets/pic3.png'
+import vex from './assets/worlds_img.jpg'
 import { useState, useEffect } from 'react'
 import { FaChevronDown, FaCog, FaMicrochip, FaCode, FaProjectDiagram, FaCheckCircle } from 'react-icons/fa'
 import { createClient } from "@supabase/supabase-js";
@@ -128,6 +129,8 @@ function App() {
               <h3 className="achievement-subtitle">to the teams for VEX WORLDS 2024 QUALIFICATION!</h3>
             </div>
             
+            <img src={vex} alt="" className="program-image"/>
+
             <div className="achievement-cards">
               <div className="achievement-card">
                 <h4>Team 770A & 770B</h4>
