@@ -110,7 +110,7 @@ function App() {
         <div className="hero-content">
           <h1 className="hero-title">Re-imagine Robotics</h1>
           <h2 className="hero-subtitle">Building Future Engineers</h2>
-          <button className="cta-button">Join Our Program</button>
+          <button className="cta-button" onClick={() => window.open('https://forms.gle/LRnv4SBBLyEqH5AV7', '_blank')}>Join Our Program</button>
         </div>
         <div className="scroll-indicator" onClick={scrollToAbout}>
           <p>Explore Our Program</p>
@@ -126,7 +126,7 @@ function App() {
               <div className="trophy-animation">
                 <div className="trophy">🏆</div>
               </div>
-              <h3 className="achievement-subtitle">to the teams for VEX WORLDS 2024 QUALIFICATION!</h3>
+              <h3 className="achievement-subtitle">to the teams for VEX <strong>WORLDS 2024 QUALIFICATION!</strong></h3>
             </div>
             
             <img src={vex} alt="" className="program-image"/>
