@@ -118,53 +118,6 @@ function App() {
         </div>
       </header>
 
-      <section id="achievements" className="section achievement-section">
-        <div className="container">
-          <div className="achievement-container">
-            <div className="achievement-header">
-              <h2 className="section-title">CONGRATULATIONS</h2>
-              <div className="trophy-animation">
-                <div className="trophy">🏆</div>
-              </div>
-              <h3 className="achievement-subtitle">to the teams for VEX <strong>WORLDS 2024 QUALIFICATION!</strong></h3>
-            </div>
-            
-            <img src={vex} alt="" className="program-image"/>
-
-            <div className="achievement-cards">
-              <div className="achievement-card">
-                <h4>Team 770A & 770B</h4>
-                <p>Re-imagine Robotics Elementary Teams have qualified for 2024 VEX Worlds Championship during last Saturday's GA State Tournament.</p>
-              </div>
-              
-              <div className="achievement-card">
-                <h4>Multiple Awards</h4>
-                <p>Both teams were qualified to GA States with multiple awards such as Excellence, Skills, Tournament Champions, Design, Innovate, etc during the regional events.</p>
-              </div>
-              
-              <div className="achievement-card">
-                <h4>Elite Qualification</h4>
-                <p>They earned 2 out of 5 spots qualifying for Worlds from the state of GA out of a total 142 teams. This is a tremendous achievement by both teams!</p>
-              </div>
-            </div>
-            
-            <div className="competition-info">
-              <div className="competition-banner">
-                <h3>Vex IQ Robotics Challenge 2023-2024</h3>
-              </div>
-              <div className="competition-links">
-                <a href="https://youtu.be/tuQ8Xz6yAdQ?si=9olNeEflpE3zy5_B" target="_blank" rel="noopener noreferrer" className="competition-link">
-                  Watch Competition Video
-                </a>
-                <a href="https://www.flickr.com/photos/recf/albums/72177720307990577" target="_blank" rel="noopener noreferrer" className="competition-link">
-                  View Photo Gallery
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="about" className="section about-section">
         <div className="container">
           <h2 className="section-title">ABOUT THE PROGRAM</h2>
@@ -243,6 +196,53 @@ function App() {
               <div className="program-content">
                 <img src={pic3} alt="Engineering Design Process" className="program-image" />
                 <p>Follow the rigorous Engineering Design Process throughout to think and work like an Engineer and learn real world STEM! Students iteratively design, build, test, and refine their solutions to complex problems.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="achievements" className="section achievement-section">
+        <div className="container">
+          <div className="achievement-container">
+            <div className="achievement-header">
+              <h2 className="section-title">CONGRATULATIONS</h2>
+              <div className="trophy-animation">
+                <div className="trophy">🏆</div>
+              </div>
+              <h3 className="achievement-subtitle">to the teams for VEX <strong>WORLDS 2025 QUALIFICATION!</strong></h3>
+            </div>
+            
+            <img src={vex} alt="" className="program-image"/>
+
+            <div className="achievement-cards">
+              <div className="achievement-card">
+                <h4>Team 770A</h4>
+                <p>Re-imagine Robotics Elementary Team qualified for the 2024 VEX Worlds Championship at the GA State Tournament. Their exceptional performance earned them a spot among top teams, showcasing their skill and strategy.</p>
+              </div>
+              
+              <div className="achievement-card">
+                <h4>Multiple Awards</h4>
+                <p>The teams secured several regional awards, including Excellence, Skills, and Tournament Champions, leading to their qualification for the Georgia State Tournament. Their success further culminated in advancing to the VEX Worlds Championship as few of the top teams from Georgia.</p>
+              </div>
+              
+              <div className="achievement-card">
+                <h4>Elite Qualification</h4>
+                <p>They secured 1 of 6 spots to Worlds from GA, competing against 157 teams. This achievement highlights their technical expertise, teamwork, and determination to succeed at the highest level.</p>
+              </div>
+            </div>
+            
+            <div className="competition-info">
+              <div className="competition-banner">
+                <h3>Vex IQ Robotics Challenge 2023-2024</h3>
+              </div>
+              <div className="competition-links">
+                <a href="https://youtu.be/tuQ8Xz6yAdQ?si=9olNeEflpE3zy5_B" target="_blank" rel="noopener noreferrer" className="competition-link">
+                  Watch Competition Video
+                </a>
+                <a href="https://www.flickr.com/photos/recf/albums/72177720307990577" target="_blank" rel="noopener noreferrer" className="competition-link">
+                  View Photo Gallery
+                </a>
               </div>
             </div>
           </div>
@@ -341,8 +341,8 @@ function App() {
           </div>
         </div>
         <div className="footer-bottom">
+          <span className="credit-line">Website made possible by <strong>Phoenix Tech Solutions</strong></span>
           <p>&copy; {new Date().getFullYear()} Re-imagine Robotics. All rights reserved.</p>
-          <p className="credit-line">Website made possible by Phoenix Tech Solutions</p>
         </div>
       </footer>
 
