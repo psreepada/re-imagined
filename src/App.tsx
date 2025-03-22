@@ -1,6 +1,6 @@
 import './App.css'
 import pic3 from './assets/pic3.png'
-import vex from './assets/worlds_img.jpg'
+import vex from '../public/vexworld.png'
 import { useState, useEffect } from 'react'
 import { FaChevronDown, FaCog, FaMicrochip, FaCode, FaProjectDiagram, FaCheckCircle } from 'react-icons/fa'
 import { createClient } from "@supabase/supabase-js";
@@ -84,7 +84,7 @@ function App() {
         <div className="container header-container">
           <div className="logo-container">
             <a href="#" className="logo-link">
-              <div className="logo-placeholder">R</div>
+              <img src="/reimagine.png" alt="Re-imagine Robotics Logo" className="logo-image" />
               <h1 className="header-title">Re-imagine Robotics</h1>
             </a>
           </div>

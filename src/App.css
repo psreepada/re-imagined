@@ -1228,3 +1228,14 @@ body {
     margin-bottom: 15px;
   }
 }
+.logo-image {
+  height: 40px;
+  width: auto;
+  margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+  .logo-image {
+    height: 32px;
+  }
+}
