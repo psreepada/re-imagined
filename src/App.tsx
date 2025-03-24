@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import { FaChevronDown, FaCog, FaMicrochip, FaCode, FaProjectDiagram, FaCheckCircle } from 'react-icons/fa'
 import { createClient } from "@supabase/supabase-js";
 
-const supabase = createClient("https://zrnpcmbnjxtiojdersgq.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpybnBjbWJuanh0aW9qZGVyc2dxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDIyNTIzOTgsImV4cCI6MjA1NzgyODM5OH0.rTcCBUknC7KhJ9xa3GkBmXtF2N7srDSEEbgtUOONIRE");
+const supabase = createClient(import.meta.env.VITE_REACT_APP_URL, import.meta.env.VITE_REACT_APP_KEY);
 
 function App() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
