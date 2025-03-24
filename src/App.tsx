@@ -1,9 +1,14 @@
 import './App.css'
 import pic3 from './assets/pic3.png'
-import vex from './assets/worlds_img.jpg'
 import { useState, useEffect } from 'react'
 import { FaChevronDown, FaCog, FaMicrochip, FaCode, FaProjectDiagram, FaCheckCircle } from 'react-icons/fa'
 import { createClient } from "@supabase/supabase-js";
+import electronics from '../public/electronics.png'
+import programing from '../public/programing.png'
+import desgin from '../public/designthink.png'
+import pic1 from '../public/pic1.jpg'
+import vexworld from '../public/vexworld.png'
+import robot from '../public/robot.png'
 
 const supabase = createClient(import.meta.env.VITE_REACT_APP_URL, import.meta.env.VITE_REACT_APP_KEY);
 
@@ -84,7 +89,7 @@ function App() {
         <div className="container header-container">
           <div className="logo-container">
             <a href="#" className="logo-link">
-              <div className="logo-placeholder">R</div>
+              <img src="/reimagine.png" alt="Re-imagine Robotics Logo" className="logo-image" />
               <h1 className="header-title">Re-imagine Robotics</h1>
             </a>
           </div>
@@ -106,11 +111,13 @@ function App() {
         </div>
       </header>
 
-      <header className="hero">
+      <header className="hero" style={{ 
+        backgroundImage: `linear-gradient(135deg, rgba(232, 208, 50, 0.9), rgba(232, 208, 50, 0.7)), url(${robot})` 
+      }}>
         <div className="hero-content">
           <h1 className="hero-title">Re-imagine Robotics</h1>
           <h2 className="hero-subtitle">Building Future Engineers</h2>
-          <button className="cta-button">Join Our Program</button>
+          <button className="cta-button" onClick={() => window.open('https://forms.gle/LRnv4SBBLyEqH5AV7', '_blank')}>Join Our Program</button>
         </div>
         <div className="scroll-indicator" onClick={scrollToAbout}>
           <p>Explore Our Program</p>
@@ -118,59 +125,12 @@ function App() {
         </div>
       </header>
 
-      <section id="achievements" className="section achievement-section">
-        <div className="container">
-          <div className="achievement-container">
-            <div className="achievement-header">
-              <h2 className="section-title">CONGRATULATIONS</h2>
-              <div className="trophy-animation">
-                <div className="trophy">🏆</div>
-              </div>
-              <h3 className="achievement-subtitle">to the teams for VEX WORLDS 2024 QUALIFICATION!</h3>
-            </div>
-            
-            <img src={vex} alt="" className="program-image"/>
-
-            <div className="achievement-cards">
-              <div className="achievement-card">
-                <h4>Team 770A & 770B</h4>
-                <p>Re-imagine Robotics Elementary Teams have qualified for 2024 VEX Worlds Championship during last Saturday's GA State Tournament.</p>
-              </div>
-              
-              <div className="achievement-card">
-                <h4>Multiple Awards</h4>
-                <p>Both teams were qualified to GA States with multiple awards such as Excellence, Skills, Tournament Champions, Design, Innovate, etc during the regional events.</p>
-              </div>
-              
-              <div className="achievement-card">
-                <h4>Elite Qualification</h4>
-                <p>They earned 2 out of 5 spots qualifying for Worlds from the state of GA out of a total 142 teams. This is a tremendous achievement by both teams!</p>
-              </div>
-            </div>
-            
-            <div className="competition-info">
-              <div className="competition-banner">
-                <h3>Vex IQ Robotics Challenge 2023-2024</h3>
-              </div>
-              <div className="competition-links">
-                <a href="https://youtu.be/tuQ8Xz6yAdQ?si=9olNeEflpE3zy5_B" target="_blank" rel="noopener noreferrer" className="competition-link">
-                  Watch Competition Video
-                </a>
-                <a href="https://www.flickr.com/photos/recf/albums/72177720307990577" target="_blank" rel="noopener noreferrer" className="competition-link">
-                  View Photo Gallery
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="about" className="section about-section">
         <div className="container">
           <h2 className="section-title">ABOUT THE PROGRAM</h2>
           <div className="about-content">
             <div className="about-image">
-              <img src={pic3} alt="Students working on robotics" />
+              <img src={pic1} alt="Students working on robotics" />
             </div>
             <div className="about-text">
               <div className="about-card">
@@ -219,7 +179,7 @@ function App() {
               </div>
               <h3>The Electronics</h3>
               <div className="program-content">
-                <img src={pic3} alt="The Electronics" className="program-image" />
+                <img src={electronics} alt="The Electronics" className="program-image" />
                 <p>Learn how to connect brain with mechanical parts, sensors and batteries & program the brain to work with remote. Students master electronic integration and control systems essential for robot functionality.</p>
               </div>
             </div>
@@ -230,7 +190,7 @@ function App() {
               </div>
               <h3>The Programming</h3>
               <div className="program-content">
-                <img src={pic3} alt="The Programming" className="program-image" />
+                <img src={programing} alt="The Programming" className="program-image" />
                 <p>Program the robot using modkit, vex code IQ, RobotC programming languages to run in autonomous and driver mode. Students develop logical thinking and problem-solving skills through coding challenges.</p>
               </div>
             </div>
@@ -241,8 +201,55 @@ function App() {
               </div>
               <h3>Engineering Design Process</h3>
               <div className="program-content">
-                <img src={pic3} alt="Engineering Design Process" className="program-image" />
+                <img src={desgin} alt="Engineering Design Process" className="program-image" />
                 <p>Follow the rigorous Engineering Design Process throughout to think and work like an Engineer and learn real world STEM! Students iteratively design, build, test, and refine their solutions to complex problems.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="achievements" className="section achievement-section">
+        <div className="container">
+          <div className="achievement-container">
+            <div className="achievement-header">
+              <h2 className="section-title">CONGRATULATIONS</h2>
+              <div className="trophy-animation">
+                <div className="trophy">🏆</div>
+              </div>
+              <h3 className="achievement-subtitle">to the teams for VEX <strong>WORLDS 2025 QUALIFICATION!</strong></h3>
+            </div>
+            
+            <img src={vexworld} alt="" className="program-image"/>
+
+            <div className="achievement-cards">
+              <div className="achievement-card">
+                <h4>Team 770A</h4>
+                <p>Re-imagine Robotics Elementary Team qualified for the 2024 VEX Worlds Championship at the GA State Tournament. Their exceptional performance earned them a spot among top teams, showcasing their skill and strategy.</p>
+              </div>
+              
+              <div className="achievement-card">
+                <h4>Multiple Awards</h4>
+                <p>The teams secured several regional awards, including Excellence, Skills, and Tournament Champions, leading to their qualification for the Georgia State Tournament. Their success further culminated in advancing to the VEX Worlds Championship as few of the top teams from Georgia.</p>
+              </div>
+              
+              <div className="achievement-card">
+                <h4>Elite Qualification</h4>
+                <p>They secured 1 of 6 spots to Worlds from GA, competing against 157 teams. This achievement highlights their technical expertise, teamwork, and determination to succeed at the highest level.</p>
+              </div>
+            </div>
+            
+            <div className="competition-info">
+              <div className="competition-banner">
+                <h3>Vex IQ Robotics Challenge 2023-2024</h3>
+              </div>
+              <div className="competition-links">
+                <a href="https://youtu.be/tuQ8Xz6yAdQ?si=9olNeEflpE3zy5_B" target="_blank" rel="noopener noreferrer" className="competition-link">
+                  Watch Competition Video
+                </a>
+                <a href="https://www.flickr.com/photos/recf/albums/72177720307990577" target="_blank" rel="noopener noreferrer" className="competition-link">
+                  View Photo Gallery
+                </a>
               </div>
             </div>
           </div>
@@ -341,8 +348,8 @@ function App() {
           </div>
         </div>
         <div className="footer-bottom">
+          <span className="credit-line">Website made possible by <strong>Phoenix Tech Solutions</strong></span>
           <p>&copy; {new Date().getFullYear()} Re-imagine Robotics. All rights reserved.</p>
-          <p className="credit-line">Website made possible by Phoenix Tech Solutions</p>
         </div>
       </footer>
 
