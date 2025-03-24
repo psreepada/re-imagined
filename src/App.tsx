@@ -1,9 +1,14 @@
 import './App.css'
 import pic3 from './assets/pic3.png'
-import vex from '../public/vexworld.png'
 import { useState, useEffect } from 'react'
 import { FaChevronDown, FaCog, FaMicrochip, FaCode, FaProjectDiagram, FaCheckCircle } from 'react-icons/fa'
 import { createClient } from "@supabase/supabase-js";
+import electronics from '../public/electronics.png'
+import programing from '../public/programing.png'
+import desgin from '../public/designthink.png'
+import pic1 from '../public/pic1.jpg'
+import vexworld from '../public/vexworld.png'
+import robot from '../public/robot.png'
 
 const supabase = createClient("https://zrnpcmbnjxtiojdersgq.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpybnBjbWJuanh0aW9qZGVyc2dxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDIyNTIzOTgsImV4cCI6MjA1NzgyODM5OH0.rTcCBUknC7KhJ9xa3GkBmXtF2N7srDSEEbgtUOONIRE");
 
@@ -106,7 +111,9 @@ function App() {
         </div>
       </header>
 
-      <header className="hero">
+      <header className="hero" style={{ 
+        backgroundImage: `linear-gradient(135deg, rgba(232, 208, 50, 0.9), rgba(232, 208, 50, 0.7)), url(${robot})` 
+      }}>
         <div className="hero-content">
           <h1 className="hero-title">Re-imagine Robotics</h1>
           <h2 className="hero-subtitle">Building Future Engineers</h2>
@@ -123,7 +130,7 @@ function App() {
           <h2 className="section-title">ABOUT THE PROGRAM</h2>
           <div className="about-content">
             <div className="about-image">
-              <img src={pic3} alt="Students working on robotics" />
+              <img src={pic1} alt="Students working on robotics" />
             </div>
             <div className="about-text">
               <div className="about-card">
@@ -172,7 +179,7 @@ function App() {
               </div>
               <h3>The Electronics</h3>
               <div className="program-content">
-                <img src={pic3} alt="The Electronics" className="program-image" />
+                <img src={electronics} alt="The Electronics" className="program-image" />
                 <p>Learn how to connect brain with mechanical parts, sensors and batteries & program the brain to work with remote. Students master electronic integration and control systems essential for robot functionality.</p>
               </div>
             </div>
@@ -183,7 +190,7 @@ function App() {
               </div>
               <h3>The Programming</h3>
               <div className="program-content">
-                <img src={pic3} alt="The Programming" className="program-image" />
+                <img src={programing} alt="The Programming" className="program-image" />
                 <p>Program the robot using modkit, vex code IQ, RobotC programming languages to run in autonomous and driver mode. Students develop logical thinking and problem-solving skills through coding challenges.</p>
               </div>
             </div>
@@ -194,7 +201,7 @@ function App() {
               </div>
               <h3>Engineering Design Process</h3>
               <div className="program-content">
-                <img src={pic3} alt="Engineering Design Process" className="program-image" />
+                <img src={desgin} alt="Engineering Design Process" className="program-image" />
                 <p>Follow the rigorous Engineering Design Process throughout to think and work like an Engineer and learn real world STEM! Students iteratively design, build, test, and refine their solutions to complex problems.</p>
               </div>
             </div>
@@ -213,7 +220,7 @@ function App() {
               <h3 className="achievement-subtitle">to the teams for VEX <strong>WORLDS 2025 QUALIFICATION!</strong></h3>
             </div>
             
-            <img src={vex} alt="" className="program-image"/>
+            <img src={vexworld} alt="" className="program-image"/>
 
             <div className="achievement-cards">
               <div className="achievement-card">
