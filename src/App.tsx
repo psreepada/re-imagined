@@ -9,6 +9,7 @@ import desgin from '../public/designthink.png'
 import pic1 from '../public/pic1.jpg'
 import vexworld from '../public/vexworld.png'
 import robot from '../public/robot.png'
+import qrcode from '../public/qr_code.png'
 
 const supabase = createClient(import.meta.env.VITE_REACT_APP_URL, import.meta.env.VITE_REACT_APP_KEY);
 
@@ -297,9 +298,13 @@ function App() {
                 <a href="https://forms.gle/LRnv4SBBLyEqH5AV7" target="_blank" rel="noopener noreferrer" className="signup-link">
                   Fill in the form
                 </a>
+                <br/>
+                <a href="/Summer Camp 2025 Flyer.pdf" download className="signup-link">
+                  Download Summer Camp Flyer
+                </a>
                 <p>or scan the QR code</p>
                 <div className="qr-placeholder">
-                  <div className="qr-code-image"></div>
+                  <img src={qrcode} alt="QR Code" className="qr-code-image" />
                 </div>
               </div>
             </div>
