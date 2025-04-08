@@ -20,6 +20,7 @@ function App() {
   const [MESSAGE, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const key = import.meta.env.VITE_KEY;
   const testimonials = [
     {
       text: "It has been my honor and privilege to know and work with Mini during the past 7 years. She began working with my robotics teams as a parent volunteer, and very quickly took on the role of a dedicated judge, donating her time and talents to teams from all over the World. Now, she is bringing these opportunities to a new generation in a new community. Mini has always been an example of service above self and she continues to inspire all who know her.",
@@ -310,24 +311,17 @@ function App() {
             </div>
             <div className="contact-form">
               <h3>Send us a message</h3>
-              <form>
+              <form action={key} method="POST">
                 <div className="form-group">
-                  <input type="text" placeholder="Your Name" required value={NAME} onChange={(e) => setName(e.target.value)} />
+                  <input type="text" name="name" placeholder="Your Name" required />
                 </div>
                 <div className="form-group">
-                  <input type="email" placeholder="Your Email" required value={EMAIL} onChange={(e) => setEmail(e.target.value)} />
+                  <input type="email" name="email" placeholder="Your Email" required />
                 </div>
                 <div className="form-group">
-                  <textarea placeholder="Your Message" rows={5} required value={MESSAGE} onChange={(e) => setMessage(e.target.value)}></textarea>
+                  <textarea name="message" placeholder="Your Message" rows={5} required></textarea>
                 </div>
-                <button 
-                  type="button" 
-                  className={`submit-button ${isSubmitting ? 'loading' : ''}`}
-                  onClick={contact}
-                  disabled={isSubmitting || !NAME || !EMAIL || !MESSAGE}
-                >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                </button>
+                <button type="submit" className="submit-button">Send Message</button>
               </form>
             </div>
           </div>
