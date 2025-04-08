@@ -1,8 +1,7 @@
 import './App.css'
 import pic3 from './assets/pic3.png'
 import { useState, useEffect } from 'react'
-import { FaChevronDown, FaCog, FaMicrochip, FaCode, FaProjectDiagram, FaCheckCircle } from 'react-icons/fa'
-import { createClient } from "@supabase/supabase-js";
+import { FaChevronDown, FaCog, FaMicrochip, FaCode, FaProjectDiagram } from 'react-icons/fa'
 import electronics from '../public/electronics.png'
 import programing from '../public/programing.png'
 import desgin from '../public/designthink.png'
@@ -11,15 +10,8 @@ import vexworld from '../public/vexworld.png'
 import robot from '../public/robot.png'
 import qrcode from '../public/qr_code.png'
 
-const supabase = createClient(import.meta.env.VITE_REACT_APP_URL, import.meta.env.VITE_REACT_APP_KEY);
-
 function App() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
-  const [NAME, setName] = useState('');
-  const [EMAIL, setEmail] = useState('');
-  const [MESSAGE, setMessage] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showSuccess, setShowSuccess] = useState(false);
   const key = import.meta.env.VITE_KEY;
   const testimonials = [
     {
@@ -41,38 +33,6 @@ function App() {
       organization: "Schilling Farms Elementary School"
     }
   ];
-
-  const contact = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!NAME || !EMAIL || !MESSAGE) return;
-    
-    setIsSubmitting(true);
-    
-    try {
-      const { error } = await supabase
-        .from('contact')
-        .insert({
-          name: NAME,
-          email: EMAIL,
-          message: MESSAGE
-        });
-        
-      if (error) throw error;
-      
-      setName('');
-      setEmail('');
-      setMessage('');
-      
-      setShowSuccess(true);
-      setTimeout(() => {
-        setShowSuccess(false);
-      }, 5000);
-    } catch (error) {
-      console.error('Error sending message:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -351,13 +311,6 @@ function App() {
           <p>&copy; {new Date().getFullYear()} Re-imagine Robotics. All rights reserved.</p>
         </div>
       </footer>
-
-      {showSuccess && (
-        <div className="success-popup">
-          <FaCheckCircle className="success-icon" />
-          <p>Message sent successfully!</p>
-        </div>
-      )}
     </div>
   )
 }
