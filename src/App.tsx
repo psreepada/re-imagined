@@ -308,7 +308,7 @@ function App() {
         </div>
         <div className="footer-bottom">
           <span className="credit-line">Website made possible by <strong>Phoenix Tech Solutions</strong></span>
-          <p>&copy; {new Date().getFullYear()} Re-imagine Robotics. All rights reserved.</p>
+          <p>&copy; 2023 Re-imagine Robotics. All rights reserved.</p>
         </div>
       </footer>
     </div>
