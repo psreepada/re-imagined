@@ -10,36 +10,37 @@ import vexworld from '../public/vexworld.png'
 import robot from '../public/robot.png'
 import qrcode from '../public/qr_code.png'
 
+const testimonials = [
+  {
+    text: "It has been my honor and privilege to know and work with Mini during the past 7 years. She began working with my robotics teams as a parent volunteer, and very quickly took on the role of a dedicated judge, donating her time and talents to teams from all over the World. Now, she is bringing these opportunities to a new generation in a new community. Mini has always been an example of service above self and she continues to inspire all who know her.",
+    author: "Ms Shelli Brasher",
+    position: "Sr. Administrator of Strategic Initiatives",
+    organization: "REC Foundation"
+  },
+  {
+    text: "Working alongside Mini Goal over the past several years has been an absolute privilege. She is not only an exceptionally experienced judge but also a remarkable mentor for those new to the judging process. Mini's dedication to her role is truly inspiring. Her wealth of experience in judging brings a level of expertise and insight that is invaluable. Mini has an uncanny ability to dissect complex situations and provide clear, well-reasoned judgments. Her attention to detail and commitment to fairness have set a high standard for judging in our field.",
+    author: "Wilbert Best",
+    position: "Worlds Judge Advisor Volunteer",
+    organization: ""
+  },
+  {
+    text: "Mini Goel was very instrumental in helping me, my first year as a Vex Coach. Before competitions Mini would come in and give our teams practice with interviewing skills. She mentored our teams and myself, in the entire design notebook process. With Mini's guidance, one of our Teams made it to World's our first year and we came home with a World trophy for the Design Notebook in our division.",
+    author: "Terri Plunk",
+    position: "Stem, Project Lead the Way",
+    organization: "Schilling Farms Elementary School"
+  }
+];
+
 function App() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const key = import.meta.env.VITE_KEY;
-  const testimonials = [
-    {
-      text: "It has been my honor and privilege to know and work with Mini during the past 7 years. She began working with my robotics teams as a parent volunteer, and very quickly took on the role of a dedicated judge, donating her time and talents to teams from all over the World. Now, she is bringing these opportunities to a new generation in a new community. Mini has always been an example of service above self and she continues to inspire all who know her.",
-      author: "Ms Shelli Brasher",
-      position: "Sr. Administrator of Strategic Initiatives",
-      organization: "REC Foundation"
-    },
-    {
-      text: "Working alongside Mini Goal over the past several years has been an absolute privilege. She is not only an exceptionally experienced judge but also a remarkable mentor for those new to the judging process. Mini's dedication to her role is truly inspiring. Her wealth of experience in judging brings a level of expertise and insight that is invaluable. Mini has an uncanny ability to dissect complex situations and provide clear, well-reasoned judgments. Her attention to detail and commitment to fairness have set a high standard for judging in our field.",
-      author: "Wilbert Best",
-      position: "Worlds Judge Advisor Volunteer",
-      organization: ""
-    },
-    {
-      text: "Mini Goel was very instrumental in helping me, my first year as a Vex Coach. Before competitions Mini would come in and give our teams practice with interviewing skills. She mentored our teams and myself, in the entire design notebook process. With Mini's guidance, one of our Teams made it to World's our first year and we came home with a World trophy for the Design Notebook in our division.",
-      author: "Terri Plunk",
-      position: "Stem, Project Lead the Way",
-      organization: "Schilling Farms Elementary School"
-    }
-  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
     }, 8000);
     return () => clearInterval(interval);
-  }, [testimonials.length]); 
+  }, []);
 
   const scrollToAbout = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
